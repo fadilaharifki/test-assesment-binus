@@ -1,113 +1,71 @@
+import { CarouselComponent } from "@/components/Carousel";
+import { LayoutComponent } from "@/components/Layout";
 import Image from "next/image";
+
+import { openCareer } from "@/constants";
+import { PartnershipComponent } from "@/components/Partnership";
+import { icons } from "@/constants/icons";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col bg-white">
+      <LayoutComponent>
+        <div className="flex flex-col justify-center items-center my-8">
+          <p className=" text-xl sm:text-[28px] font-light text-center text-[#3CAFE0] pb-2 sm:pb-4">WELCOME TO</p>
+          <p className=" text-xl sm:text-[28px] font-bold text-center text-[#3CAFE0]">MASS COMMUNICATION PROGRAM</p>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <CarouselComponent />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 m-[30px]">
+          <div className="box-content h-[721px] shadow-2xl rounded-xl flex flex-col items-center ">
+            <div className="pt-12 pb-[14px]">
+              <Image src={icons.graduate_profile} width={100} height={100} alt="pita univ" />
+            </div>
+            <div className="gap-[14px]">
+              <p className=" text-xl sm:text-[32px] text-grayText text-center pb-2 sm:pb-4">GRADUATE PROFILE</p>
+              <p className=" text-xs sm:text-base text-grayText text-center w-52 sm:w-[352px]">Our programs are designed to shape future leaders. Explore our programs below.</p>
+            </div>
+            <div className="p-4 mt-16 border-t-2 border-[#808080] max-w-[494px]">
+              <p className="text-base sm:text-[21px] text-grayText">Mastering Communication: Crafting Proficient Graduates</p>
+              <p className="text-xs sm:text-sm text-grayDark mt-[10px]">September 13, 2023</p>
+            </div>
+            <div className="p-4 border-t-2 border-[#808080] max-w-[494px]">
+              <p className="text-base sm:text-[21px] text-grayText">Empowering Tomorrow’s Communicators: The Graduate Profile</p>
+              <p className="text-xs sm:text-sm text-grayDark  mt-[10px]">September 20, 2023</p>
+            </div>
+            <div className="flex justify-center items-center pt-16 cursor-pointer">
+              <p className="text-xs sm:text-base text-grayText">View More</p>
+              <div className="ml-2">
+                <Image src={icons.right_arrow} width={10} height={15} alt="right_arrow" />
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center box-content h-[721px] shadow-md bg-gradient-to-r from-blue-400  to-blue-600 rounded-xl">
+            <div className="pt-12 pb-[14px]">
+              <Image src={icons.icon_career} width={100} height={100} alt="pita univ" />
+            </div>
+            <div className="gap-[14px]">
+              <p className=" text-xl sm:text-[32px] text-white text-center pb-2 sm:pb-4">PROSPECT CAREER</p>
+              <p className=" text-xs sm:text-base text-white text-center w-52 sm:w-[352px]">Our programs are designed to shape future leaders. Explore our programs below.</p>
+            </div>
+            <div className="grid gap-4 pt-10">
+              {openCareer.map((item, i) => {
+                return (
+                  <div className="bg-white w-64 sm:w-[360px] h-[41px] rounded-full pl-5 cursor-pointer transition duration-500 hover:scale-110 hover:bg-orange " key={i}>
+                    <p className="flex h-full items-center text-grayText hover:text-white duration-200 text-xs sm:text-base">{item.name}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex justify-center items-center pt-16 cursor-pointer">
+              <p className="text-xs sm:text-base text-white">View More</p>
+              <div className="ml-2">
+                <Image src={icons.right_arrow_white} width={10} height={15} alt="right_arrow_white" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <PartnershipComponent />
+      </LayoutComponent>
     </main>
   );
 }
